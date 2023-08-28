@@ -5,6 +5,7 @@
             <div class="log">log in</div>
             <div class="sign">Register</div>
         </div>
+
     </div>
     <div class="input_home">
 <!--        <div class="num_one"  @click="() => TogglePopup('buttonTrigger')">Search</div>-->
@@ -57,6 +58,7 @@
     </div>
     <Home></Home>
 
+
     <Footer />
 <!--  <SearchBox-->
 <!--          v-if="popupTriggers.buttonTrigger"-->
@@ -78,6 +80,7 @@ import Home from "@/components/Home.vue";
 import BoxIcon from "@/components/BoxIcon.vue";
 import SearchBox from "@/components/SearchBox.vue";
 import Footer from "@/components/Footer.vue";
+import Pagination from "@/components/Pagination.vue";
 // const count = ref(0);
 // import axios from "axios";
 
@@ -91,7 +94,7 @@ export default {
     },
 
 
-    components: {Footer, BoxIcon, Home, },
+    components: {Pagination, Footer, BoxIcon, Home, },
 
     // setup() {
     //     const popupTriggers =ref({

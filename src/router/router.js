@@ -7,6 +7,7 @@ import All_Icons from "@/components/All_Icons.vue";
 import Faced from "@/components/Faced.vue";
 import InputMain from "@/components/InputMain.vue";
 import Footer from "@/components/Footer.vue";
+import Pagination from "@/components/Pagination.vue";
 
 
 
@@ -25,8 +26,8 @@ export default createRouter({
         {path: '/icons', component: All_Icons},
         {path: '/faced', component: Faced},
         {path: '/input', component: InputMain},
-        {path: '/footer', component: Footer}
-
+        {path: '/footer', component: Footer},
+        {path: '/pag', component: Pagination},
 
     ]
 })

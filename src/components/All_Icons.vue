@@ -1,6 +1,6 @@
 <template>
     <div class="input_big">
-        <input @keyup.enter="searchInput"
+        <input @keypress.enter="searchInput"
                id="myInput"
                class="gig-input"
                type="search"
@@ -13,6 +13,13 @@
             <img :src="icon.url" style="width: 45px; margin: 20px; " alt="">
         </div>
     </div>
+    <Pagination />
+
+
+
+
+
+
 
 
 </template>
@@ -20,9 +27,12 @@
 <script>
 
 import axios from "axios";
+import Pagination from "@/components/Pagination.vue";
+
 
 export default {
     name: "All_Icons",
+    components: {Pagination},
 
     data() {
 
@@ -39,7 +49,8 @@ export default {
             const {data} = await axios.get("https://svg.q19.kz/api/v1/icons/", {
                 params: {
                     limit: 60,
-                    keyword: this.search.toLowerCase()
+                    keyword: this.search.toLowerCase(),
+                    page: 1
 
                 }
             })
@@ -47,20 +58,18 @@ export default {
             this.icons = data.data
         },
 
-        searchInput(event) {
 
-            this.filteredIcons()
-
-        },
-    },
-
-
-    computed: {
+         searchInput(event) {
+             this.filteredIcons();
+         },
         filteredIcons() {
-            this.getIcons()
-            return this.icons
-        }
+                     this.getIcons()
+                    return this.icons
+                }
     },
+
+
+
 
     created() {
         this.getIcons()
@@ -82,7 +91,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     margin-left: 120px;
-    margin-bottom: 150px;
+
 }
 
 .icons_main {
