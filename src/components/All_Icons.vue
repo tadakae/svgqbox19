@@ -107,6 +107,8 @@ export default {
     height: 100px;
     margin: 10px;
     border-radius: 15px;
+    z-index: 99;
+    cursor: pointer;
 
 }
 
