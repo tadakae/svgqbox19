@@ -12,6 +12,7 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
     "element-plus": "^2.3.12",
+    "haml": "^0.4.3",
     "vue": "^3.2.47",
     "vue-router": "^4.2.4"
   },

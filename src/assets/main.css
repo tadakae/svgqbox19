@@ -110,6 +110,14 @@ h1 h2 h3 h4 h5 h6 {
     border-radius: 22px;
     border: none;
     padding-left: 15px;
+    background: none;
+    color: white;
+    width: 320px;
+}
+
+.gig-input::placeholder {
+    color: white;
+    font-size: 26px;
 }
 
 .gig-input:focus {
