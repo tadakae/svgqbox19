@@ -1,36 +1,12 @@
 <template>
-  <div class="pagination">
-      <div class="num">
-
-      </div>
-      <div class="num">
-
-      </div>
-      <div class="num">
-
-      </div>
-      <div class="num">
-
-      </div>
-      <div class="num">
-
-      </div>
-      <div class="num">
-
-      </div>
-      <div class="num">
-
-      </div>
-      <div class="num">
-
-      </div>
-      <div class="num">
-
-      </div>
-      <div class="num">
-
-      </div>
+  <div class="pagination-row">
+      <button class="arrow">&lt;-</button>
+      <span v-for="(item, index) in new Array(10)" :key="index">
+          <button class="num_page">{{index + 1}}</button>
+      </span>
+      <button class="arrow">-&gt;</button>
   </div>
+
 </template>
 
 <script>
@@ -41,23 +17,19 @@ export default {
 
 <style scoped>
 
-.pagination {
-    width: 450px;
-    height: 35px;
-    border-radius: 12px;
-    border: none;
-    margin-left: 499px;
-    justify-content: space-between;
+.pagination-row {
+    margin-left: 540px;
     margin-top: 45px;
     margin-bottom: 150px;
-    display: flex;
 }
 
-.num {
-    width: 35px;
+.arrow {
     border-radius: 6px;
-    border: none;
-    background-color: white;
+}
+
+.num_page {
+    border-radius: 4px;
+    margin: 3px;
 }
 
 </style>
